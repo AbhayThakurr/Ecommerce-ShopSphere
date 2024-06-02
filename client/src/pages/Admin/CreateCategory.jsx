@@ -16,7 +16,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/category/create-category",
+        "https://ecommerce-shopsphere-1.onrender.com/category/create-category",
         {
           name,
         }
@@ -37,7 +37,7 @@ const CreateCategory = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/category/get-category"
+        "https://ecommerce-shopsphere-1.onrender.com/category/get-category"
       );
       if (data.success) {
         setCategories(data.category);
@@ -57,7 +57,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        `http://localhost:8080/category/update-category/${selected._id}`,
+        `https://ecommerce-shopsphere-1.onrender.com/category/update-category/${selected._id}`,
         { name: updatedName }
       );
       if (data.success) {
@@ -77,7 +77,7 @@ const CreateCategory = () => {
   const handleDelete = async (pId) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:8080/category/delete-category/${pId}`
+        `https://ecommerce-shopsphere-1.onrender.com/category/delete-category/${pId}`
       );
       if (data.success) {
         alert(`category is deleted`);

@@ -9,7 +9,9 @@ const Orders = () => {
   const [auth, setAuth] = useAuth();
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/auth/orders");
+      const { data } = await axios.get(
+        "https://ecommerce-shopsphere-1.onrender.com/auth/orders"
+      );
       setOrders(data);
     } catch (error) {
       console.log(error);
@@ -58,7 +60,7 @@ const Orders = () => {
                       <div className="row mb-2 p-3 card flex-row" key={p._id}>
                         <div className="col-md-4">
                           <img
-                            src={`http://localhost:8080/product/product-photo/${p._id}`}
+                            src={`https://ecommerce-shopsphere-1.onrender.com/product/product-photo/${p._id}`}
                             className="card-img-top"
                             alt={p.name}
                             width="100px"

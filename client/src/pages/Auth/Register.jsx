@@ -15,14 +15,17 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/auth/register", {
-        name,
-        email,
-        password,
-        phone,
-        address,
-        answer,
-      });
+      const res = await axios.post(
+        "https://ecommerce-shopsphere-1.onrender.com/auth/register",
+        {
+          name,
+          email,
+          password,
+          phone,
+          address,
+          answer,
+        }
+      );
 
       if (res.data.success) {
         alert("Register Succesfull");

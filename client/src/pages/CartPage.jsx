@@ -46,7 +46,7 @@
 //   const getToken = async () => {
 //     try {
 //       const { data } = await axios.get(
-//         "http://localhost:8080/product/braintree/token"
+//         "https://ecommerce-shopsphere-1.onrender.com/product/braintree/token"
 //       );
 //       setClientToken(data?.clientToken);
 //     } catch (error) {
@@ -64,7 +64,7 @@
 //       const { nonce } = await instance.requestPaymentMethod();
 //       // eslint-disable-next-line no-unused-vars
 //       const { data } = await axios.post(
-//         "http://localhost:8080/product/braintree/payment",
+//         "https://ecommerce-shopsphere-1.onrender.com/product/braintree/payment",
 //         {
 //           nonce,
 //           cart,
@@ -104,7 +104,7 @@
 //               <div className="row mb-2 p-3 card flex-row" key={p._id}>
 //                 <div className="col-md-4">
 //                   <img
-//                     src={`http://localhost:8080/product/product-photo/${p._id}`}
+//                     src={`https://ecommerce-shopsphere-1.onrender.com/product/product-photo/${p._id}`}
 //                     className="card-img-top"
 //                     alt={p.name}
 //                     width="100px"
@@ -249,7 +249,7 @@ const CartPage = () => {
   const getToken = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/product/braintree/token"
+        "https://ecommerce-shopsphere-1.onrender.com/product/braintree/token"
       );
       setClientToken(data?.clientToken);
     } catch (error) {
@@ -267,7 +267,7 @@ const CartPage = () => {
       const { nonce } = await instance.requestPaymentMethod();
       // eslint-disable-next-line no-unused-vars
       const { data } = await axios.post(
-        "http://localhost:8080/product/braintree/payment",
+        "https://ecommerce-shopsphere-1.onrender.com/product/braintree/payment",
         {
           nonce,
           cart,
@@ -309,7 +309,7 @@ const CartPage = () => {
                 <div className="row card flex-row" key={p._id}>
                   <div className="col-md-4">
                     <img
-                      src={`http://localhost:8080/product/product-photo/${p._id}`}
+                      src={`https://ecommerce-shopsphere-1.onrender.com/product/product-photo/${p._id}`}
                       className="card-img-top"
                       alt={p.name}
                       width="100%"

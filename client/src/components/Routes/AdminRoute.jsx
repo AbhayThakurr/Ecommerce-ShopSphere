@@ -10,7 +10,9 @@ const AdminRoute = () => {
 
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.get("http://localhost:8080/auth/admin-auth");
+      const res = await axios.get(
+        "https://ecommerce-shopsphere-1.onrender.com/auth/admin-auth"
+      );
       if (res.data.ok) {
         setOk(true);
       } else {

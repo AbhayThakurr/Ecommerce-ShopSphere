@@ -17,10 +17,13 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/auth/login", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://ecommerce-shopsphere-1.onrender.com/auth/login",
+        {
+          email,
+          password,
+        }
+      );
       if (res && res.data.success) {
         alert(res.data && res.data.message);
         setAuth({

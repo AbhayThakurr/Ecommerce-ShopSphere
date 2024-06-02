@@ -26,13 +26,16 @@ const Profile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put("http://localhost:8080/auth/profile", {
-        name,
-        email,
-        password,
-        phone,
-        address,
-      });
+      const { data } = await axios.put(
+        "https://ecommerce-shopsphere-1.onrender.com/auth/profile",
+        {
+          name,
+          email,
+          password,
+          phone,
+          address,
+        }
+      );
       if (data?.error) {
         alert(data?.error);
       } else {

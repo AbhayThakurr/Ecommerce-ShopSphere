@@ -20,7 +20,7 @@ const CreateProduct = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/category/get-category"
+        "https://ecommerce-shopsphere-1.onrender.com/category/get-category"
       );
       if (data?.success) {
         setCategories(data?.category);
@@ -50,7 +50,7 @@ const CreateProduct = () => {
       productData.append("category", category);
 
       const { data } = await axios.post(
-        "http://localhost:8080/product/create-product",
+        "https://ecommerce-shopsphere-1.onrender.com/product/create-product",
         productData
       );
       if (data?.success) {
@@ -76,7 +76,7 @@ const CreateProduct = () => {
   //     productData.append("photo", photo);
   //     productData.append("category", category);
   //     const { data } = axios.post(
-  //       "http://localhost:8080/product/create-product",
+  //       "https://ecommerce-shopsphere-1.onrender.com/product/create-product",
   //       productData
   //     );
   //     if (data?.success) {

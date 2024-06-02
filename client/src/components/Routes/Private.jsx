@@ -10,7 +10,9 @@ const PrivateRoute = () => {
 
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.get("http://localhost:8080/auth/user-auth");
+      const res = await axios.get(
+        "https://ecommerce-shopsphere-1.onrender.com/auth/user-auth"
+      );
       if (res.data.ok) {
         setOk(true);
       } else {

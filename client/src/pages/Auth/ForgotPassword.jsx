@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8080/auth/forgot-password",
+        "https://ecommerce-shopsphere-1.onrender.com/auth/forgot-password",
         {
           email,
           answer,
